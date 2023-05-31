@@ -539,13 +539,11 @@ const locDepths2 = creaLoc(
      mientras que por el lado contrario se adivina \
      ${algo semienterrado en la arena, o}. \
      Una ${llamativa colonia de algas, s} se puede ver \
-     a lo lejos, mientras que un ${gran promontorio, n} \
-     pétreo se adivina aún más lejos.",
+     a lo lejos.",
     LocKind.Sea
 );
 
 locDepths2.ini = function() {
-    this.setExitBi( "norte", locDepths5 );
     this.setExitBi( "sur", locDepths1 );
     this.setExitBi( "este", locDepths3 );
     this.setExitBi( "oeste", locDepths4 );
@@ -594,8 +592,7 @@ const locDepths4 = creaLoc(
 	[],
 	"Buceas pegada al lecho marino. La arena, de un amarillo grisáceo, \
      apagado, se extiende en todas direcciones. Llaman la atención \
-     ${algunos buzos, ex buzos}, ${un promontorio de roca, arriba}, \
-     ${una zona más luminosa, e}, y, \
+     ${algunos buzos, ex buzos}, ${una zona más luminosa, e}, y, \
      por contraste, ${una zona en sombras, baja}.",
     LocKind.Sea
 );
