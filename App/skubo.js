@@ -29,9 +29,9 @@ const creaLoc = function(id, syns, desc, lk) {
 const locStores = creaLoc(
 	"Almacenes",
 	[],
-	"Puedes ver varios almacenes, supones que de pescado. \
-    Puedes avanzar hacia el ${puerto, so}, por un lado del anillo, \
-    o hacia una ${zona residencial, se}, por el otro. \
+	"Ves varios almacenes, supones que de pescado. \
+    Puedes avanzar hacia el ${puerto, o}, por un lado del anillo, \
+    o hacia una ${zona residencial, e}, por el otro. \
     Es posible ${atravesar un puente, sal} que lleva al anillo externo.",
     LocKind.Land
 );
@@ -283,6 +283,7 @@ const objAberturas = ctrl.creaObj(
 );
 
 objAberturas.preExamine = function() {
+    const dvCmds = document.getElementById( "dvCmds" );
     const msg = this.desc += " Con un traje de neopreno morado y negro... \
                               En la abertura frente a ti, \
                               puedes verle inerte, en el fondo del mar, \
@@ -293,8 +294,13 @@ objAberturas.preExamine = function() {
                               Acompañas la penosa ascensión de \
                               los tres buceadores... siempre presente, \
                               pero como fuera de la escena. \
-                              Y solo entonces, comienzas a comprender."
-    ctrl.endGame( msg, "" );
+                              Y solo entonces, comienzas a comprender. \
+                              <p>Fin.<br/>\
+                              <a href='javascript: window.location.reload()'> \
+                              Volver a leer</a>.</p>";
+
+    dvCmds.style.display = "none";
+    ctrl.endGame( msg, "res/ascension.jpg" );
 };
 
 
@@ -309,7 +315,8 @@ const locTempleTerrace = creaLoc(
       Frente al final de la angosta pasarela, \
       se encuentra una ${edificacion, n} \
       que por su posicion y altura, debe tener gran importancia. \
-      Se te antoja que es algun tipo de templo. ¿A que culto se dedicaria?",
+      Se te antoja que es algun tipo de templo. ¿A que culto se dedicaria? \
+      Una pasarela permite ${salir, sal} al anillo interior.",
     LocKind.Land
 );
 
@@ -384,7 +391,7 @@ const objWalkway = ctrl.creaObj(
 	[ "puente", "muretes", "murete", "puentecillo" ],
 	"Muy alta, para permitir pasar embarcaciones por debajo, \
      con altos muretes además, \
-     pero tambien muy estrecha.",
+     pero tambien muy estrecha. Se puede ${cruzar, entra}.",
 	locWalkway,
 	Ent.Escenario
 );
@@ -399,10 +406,10 @@ const locPortal = creaLoc(
        puedes intuir lo que se supone que es el agua, a raya por parte \
        de una ${fuerza desconocida para ti, ex boveda}. }\
        <p>El portal se sitúa sobre \
-       una plataforma ${sumergida, ex boveda} \
+       una plataforma ¿${sumergida, ex boveda}? \
        con base en forma de anillo sobre un \
-       ${canal, ex canal} que permite el acceso \
-       al ${este, este} y al ${oeste, oeste}. \
+       ${canal, ex canal}. El anillo permite el acceso \
+       en un ${sentido, este} y al ${contrario, oeste}. \
        Supones que debería poderse \
        ${cruzar el portal, entra en portal} de nuevo.</p>",
     LocKind.Land
@@ -476,7 +483,8 @@ const objCanal = ctrl.creaObj(
 const objBoveda = ctrl.creaObj(
 	"boveda",
 	[ "cielo" ],
-	"Se trata de algún tipo de fuerza invisible, \
+	"Se trata de algún tipo de fuerza invisible \
+     la que mantiene las aguas alejadas, \
      puesto que, de nuevo, no puedes apreciar ningún tipo \
      de maquinaria o soporte.",
 	locPortal,
@@ -698,19 +706,27 @@ const objRamp = ctrl.creaObj(
 const objNets = ctrl.creaObj(
 	"redes",
 	[],
-	"Secandose al aire.",
+	"Secándose al aire.",
 	locHarbor,
 	Ent.Escenario
 );
 
+const objShips = ctrl.creaObj(
+	"barcos",
+	[ "barco", "embarcacion", "embarcaciones" ],
+	"Los barcos entran y salen del puerto, \
+     contribuyendo al tráfico en el ${canal, ex canal}.",
+	locHarbor,
+	Ent.Escenario
+);
 
 // --------------------------------------------------------------- locResidence
 const locResidence = creaLoc(
 	"Residencia",
 	[ "residencial" ],
-	"Las ${personas, ex personas} aqui se encuentran ekonfrascadas en tareas \
+	"Las ${personas, ex personas} aqui se encuentran enfrascadas en tareas \
      aparentemente cotidianas. Por primera vez, puedes ver \
-     ${niños, ex ninos},estan jugando, todos con su tunica azul, \
+     ${niños, ex ninos}, estan jugando, todos con su tunica azul, \
      aunque esta es de un azul intenso, más oscuro, \
      en contraste con el celeste anterior. \
      Cercano a ti puedes ver un gran ${edificio, ex edificio}, \
@@ -735,6 +751,31 @@ const objEdificio = ctrl.creaObj(
 	locResidence,
 	Ent.Escenario
 );
+
+const pnjNinnos = ctrl.personas.creaPersona(
+    "niños",
+    [ "nino", "ninos" ],
+    "Los ${niños, habla con ninos} juegan y se divierten entre ellos.",
+    locResidence
+);
+
+pnjNinnos.ini = function() {
+    this.status = 0;
+};
+
+pnjNinnos.preTalk = function() {
+    let toret = "Te miran durante un momento, sonríen y... \
+                 señalan al centro del anillo.";
+
+    this.say( "Hola, niños..." );
+
+    if ( this.status == 0 ) {
+        this.status++;
+        toret += " Empiezas a sentirte inquieta. ¿Qué está pasando?";
+    }
+
+    return toret;
+};
 
 
 // ------------------------------------------------------------------ locTemple
@@ -775,7 +816,7 @@ const objCamara = ctrl.creaObj(
 	"camara",
 	[ "centro" ],
 	"La cámara se encuentra en el ${centro exacto del templo, n}, \
-     y tiene constias aberturas, aunque es muy angosto.",
+     y tiene varias aberturas, aunque es muy angosto.",
 	locTemple,
 	Ent.Escenario
 );
@@ -784,12 +825,12 @@ const objCamara = ctrl.creaObj(
 // ------------------------------------------------------------ locUrbanization
 const locUrbanization = creaLoc(
 	"Urbanizacion",
-	[ "casa", "casas" ],
+	[],
 	"Varias ${casas, ex casas} se organizan en cuadrícula \
-     desde una ${explanada, explanada} cerca del ${canal, ex canal} \
+     desde una explanada cerca del ${canal, ex canal} \
      hasta algún punto cercano a la ${bóveda, ex boveda}. \
-     Desde aquí se puede roder el canal hasta le portal, o \
-     en sentido contrario hasta un ${puente sobre el canal, n}.",
+     Desde aquí se puede recorrer el anillo hasta ${el portal, o}, \
+     o en sentido contrario hasta un ${puente sobre el canal, arriba}.",
     LocKind.Land
 );
 
