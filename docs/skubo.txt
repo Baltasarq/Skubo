@@ -1,0 +1,205 @@
+Barco
+El Mytilus se mece suavemente sobre el ${agua, ex agua}. El buque oceanográfico ha hecho descender con la ${grúa, ex grua} el pequeño ${submarino , ex submarino} para investigar el lecho a fondo. Es vuestro turno. Es el momento de descubrir: la ${Atlántida, ex atlantida} espera.
+
+> ex agua
+El mar se encuentra tranquilo esta mañana. La temperatura, con más de 20º, resulta muy agradable.
+
+> ex grua
+La grua espera inclinada sobre el agua a que vuelva el submarino.
+
+> ex submarino
+Como un pequeño torpedo amarillo, pero lleno de sensores. Ahora no está aquí.
+
+> ex atlantida
+La UVigo y el CSIC financian esta expedición para encontrar la ciudad perdida. La superficie de agua a explorar es inmensa, pues aunque preferentemente exploramos al sur de Doñana, en realidad cualquier punto entre Huelva y Jerez de la Frontera sería válido.
+
+> ex Gabriel
+Gabriel te mira expectante.
+
+> habla con Gabriel
+Es tu turno, Silvia. Han bajado todos ya. ¡Tráenos algo!
+
+> ex traje
+Tu traje de neopreno, morado y negro.
+
+> coge traje
+> ponte traje
+
+> ex bombonas
+Para poder respirar, grandes y oblongamente redondeadas.
+
+> coge bombonas
+> ponte bombonas
+
+> ex respirador
+Conecta tu boca con las bombonas.
+
+> coge respirador
+> ponte respirador
+
+> ex reloj
+Marca la profundidad y el tiempo de inmersión.
+
+> coge reloj
+> ponte reloj
+
+> baja
+
+Profundidades1
+Buceas pegada al lecho marino. La arena, de un amarillo grisáceo, apagado, se extiende en todas direcciones.
+
+> n
+
+Profundidades2
+Buceas pegada al lecho marino. La arena, de un amarillo grisáceo, apagado, se extiende en todas direcciones.
+
+> o a Profundidades4
+> n a Profundidades5
+> e
+
+Profundidades3
+Buceas pegada al lecho marino. La arena, de un amarillo grisáceo, apagado, se extiende en todas direcciones.
+
+.end
+
+Profundidades4
+Buceas pegada al lecho marino. La arena, de un amarillo grisáceo, apagado, se extiende en todas direcciones.
+
+> e a Profundidades2
+.end
+
+Profundidades5
+Buceas pegada al lecho marino. La arena, de un amarillo grisáceo, apagado, se extiende en todas direcciones.
+
+> ex portal
+¡Es increíble! Un portal de piedra, de colosales dimensiones, se encuentra justo delante de ti, al norte, invitándote a entrar a algún sitio... ¡en el que no hay agua!
+> s a Profundidades2
+> n
+
+Portal
+^{Te ves succionada por el portal para aparecer, como por arte de magia, de pie, sana y salva, del otro lado. Te giras hacia atrás, y solo puedes intuir lo que se supone que es el agua, a raya por parte de una fuerza desconocida para ti.}
+El portal se sitúa sobre una plataforma con base en forma de anillo sobre un ${canal, ex canal} que permite el acceso al ${este, este} y al ${oeste, oeste}. Debería poderse ${cruzar el portal, entra en portal} de nuevo.
+
+> ex portal_obj
+El portal mantiene a raya el agua del mar, de manera que forma una especie de ${bóveda, ex boveda} sobre tu cabeza. No hay soportes aparentes o maquinaria de ningún tipo que produzca este efecto.
+
+> ex boveda
+Se trata de algún tipo de fuerza invisible, puesto que, de nuevo, no puedes apreciar ningún tipo de maquinaria o soporte.
+
+> ex canal
+A tus pies, la plataforma circular contiene una masa de agua por la que circulan embarcaciones.
+
+> ne a Urbanizacion
+> no
+
+Mercado
+Lo que parecen los ${puestos, ex puestos} de un ${mercado, ex mercado} se extienden desde el ${canal, ex canal} hacia algún punto cercano a la ${bóveda, ex boveda}.
+
+> ex puestos
+Solo algunas ${personas, ex personas}, probablemente los vendedores, pueden verse cerca de algunos de los puestos.
+
+> ex personas
+Definitivamente humanos. Parecen personas como cualquiera que pudiera haberme cruzado por la calle ayer, solo que con una floja túnica azul claro cubriéndoles la mayor parte del cuerpo.
+
+> habla con personas
+Intentas establecer contacto con alguno de ellos...
+"Hola... hello... Can you help me? ¿Puede ayudarme?"
+La mayor parte de ellos solo asiente y sonríe cálidamente, mientras algunos otros bailan contigo... un par de giros y vuelven a lo suyo...
+
+> ne a Puente
+.end
+
+Urbanizacion
+
+Varias ${casas, ex casas} se organizan en cuadrícula desde una ${explanada, explanada} cerca del ${canal, ex canal} hasta algún punto cercano a la ${bóveda, ex boveda}.
+
+> ex casas
+Las casas son bajas, hechas aparentemente de algún tipo de ${piedra, ex piedra} con tonos metalizados, pero sin puertas ni ventanas.
+
+> ex piedra
+La piedra es excepcionalmente dura al tacto, y jurarías que está hecha de la combinación de algún tipo de roca con una aleación ligera... Tiene un tono metalizado entre dorado y plateado ¿Sería este el famoso oricalcum?
+
+> so a Portal
+.end
+
+Puente
+
+Desde este punto es posible ${cruzar, s} el ${canal, ex canal} sobre una construcción del mismo ${material, ex oricalcum} que has visto hasta ahora.
+
+> ex oricalcum
+Algún tipo de roca con tonos metalizados dorados y plateados.
+
+> so a Mercado
+> n
+
+Almacenes
+Puedes ver varios almacenes, supones que de pescado. Puedes avanzar hacia el ${puerto, so}, por un lado del anillo, o hacia una ${zona residencial, se}, por el otro.
+> so a Puerto
+> se
+
+Residencia
+Las personas aqui se encuentran ekonfrascadas en tareas aparentemente cotidianas. Por primera vez, puedes ver niños, estan jugando, todos con su tunica azul, aunque esta es de un azul intenso, mas oscuro, en contraste con el celeste anterior.
+Cercano a ti puedes ver un gran ${edificio, ex edificio}, contra el canal exterior y alejado del ${canal interior, ex canal}.
+
+> ex edificio
+Se trata de una gran construccion del mismo material de antes, con sus tonalidades petreas, plateadas y aureas. Por la gran cantidad de ventanas, deduces que parece... un complejo de apartamentos...
+
+!> ex canal
+!Por el canal circulan multitud de embarcaciones.
+
+> so
+
+Pasarela
+Este es otro de esos puntos de paso, en este caso al anillo interior, no parece que haya ${mas canales, ex canales}. Se trata de un angosto puentecillo cubierto a modo de paraguas alargado, pero para una pasarela del ancho de una persona.
+
+!> ex canal
+!Por el canal circulan multitud de embarcaciones.
+
+> ex pasarela
+Muy alta, para permitir pasar embarcaciones por debajo, pero tambien muy estrecha.
+
+> no a Puerto
+> n a Explanada del templo
+.end
+
+Puerto
+Buena parte del anillo se emplea aqui como rampa para permitir a los ${barcos, ex barcos} acceder al ${agua, ex agua}. Entre los dos canales y la rampa se asientan multitud de pequeños ${edificios, ex edificios}. Por todas partes, especialmente en la rampa, puedes ver redes secandose.
+
+> ex redes
+Secandose al aire.
+
+> ex rampa
+Multiples ${embarcaciones, ex barcos} estan varados en ella, sobre todo pequeños.
+
+> ex edificios
+Si tuvieras que adivinar, dirias que se trata de lonjas y almacenas. Hay ${personas, ex personas} moviendose entre ellos.
+
+!> ex personas
+!Su sonrisa no es tan abierta, aunque aun asi transmiten un sentimiento de tranquilidad y felicidad.
+
+> ne a Puente
+> so a Pasarela
+.end
+
+Explanada del templo
+^{Por algunos huecos entre las diferentes estructuas puedes ver los dos canales, el interior y el exterior. Es obvio que te encuentras ahora en el centro, despues de tanto caminar rodeando los anillos.} Frente al final de la angosta pasarela, se encuentra una edificacion que por su posicion y altura, debe tener gran importancia. Se te antoja que es algun tipo de templo. ¿A que culto se dedicaria?
+
+> n
+
+Templo
+^{El interior del templo está muy oscuro, tus ojos tardan en acostumbrarse a la luz. En cuanto te adentras en él, un sentimiento ominoso te invade, no puedes evitar un mal presagio, o simplemente una mala sensación. }El interior es bastante más pequeño de lo que anticipabas. Puedes ver dos ${atlantes, ex sacerdotes}, portando sendos ${báculos, ex baculos} iguales.
+
+> ex sacerdotes
+Estos dos atlantes son algún tipo de sacerdotes en este oscuro templo. Ambos llevan una túnica negra, y no sonríen como el resto de gente que has encontrado hasta ahora. Cuando les miras interrogativamente, señalan con su bastón el ${centro del templo, ex camara}.
+
+> ex camara
+La cámara se encuentra en el centro exacto del templo, y tiene varias aberturas, aunque es muy angosto.
+
+> n
+
+Centro del templo
+En este angosto recinto con una forma que se te antoja como el del interior de una columna, solo puedes ver ${unas aberturas, ex aberturas} a ambos lados y otra frente a ti.
+
+> ex aberturas
+En ellas ves a... un buceador.
+!Con un traje de neopreno morado y negro... En la abertura frente a ti, puedes verle inerte, en el fondo del mar, y cómo otros dos buceadores le elevan con ayuda de una cuerda. De pronto, todo a tu alrededor se desvanece. El templo, la ciudad, todo se ha ido. Acompañas la penosa ascensión de los tres buceadores... siempre presente, pero como fuera de la escena. Y solo entonces, comienzas a comprender.

@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<Mapa >
+<LocInic>Barco</LocInic>
+<Locs >
+<Loc >
+<Nombre>Anillo interior - Puente</Nombre>
+<Desc>
+blah, blah</Desc>
+<SUR>Puente</SUR>
+<SUDOESTE>Puerto</SUDOESTE>
+<SUDESTE>Residencia</SUDESTE>
+</Loc>
+
+<Loc >
+<Nombre>Barco</Nombre>
+<Desc>
+El Mytilus se mece suavemente sobre el ${agua, ex agua}. El buque oceanográfico ha hecho descender con la ${grúa, ex grua} el pequeño ${submarino , ex submarino} para investigar el lecho a fondo. Es vuestro turno. Es el momento de descubrir: la ${Atlántida, ex atlantida} espera.</Desc>
+<ABAJO>Profundidades1</ABAJO>
+</Loc>
+
+<Loc >
+<Nombre>Centro del templo</Nombre>
+<Desc>
+En este angosto recinto con una forma que se te antoja como el del interior de una columna, solo puedes ver ${unas aberturas, ex aberturas} a ambos lados y otra frente a ti.</Desc>
+<SUR>Templo</SUR>
+</Loc>
+
+<Loc >
+<Nombre>Explanada del templo</Nombre>
+<Desc>
+^{Por algunos huecos entre las diferentes estructuas puedes ver los dos canales, el interior y el exterior. Es obvio que te encuentras ahora en el centro, despues de tanto caminar rodeando los anillos.} Frente al final de la angosta pasarela, se encuentra una edificacion que por su posicion y altura, debe tener gran importancia. Se te antoja que es algun tipo de templo. ¿A que culto se dedicaria?</Desc>
+<NORTE>Templo</NORTE>
+</Loc>
+
+<Loc >
+<Nombre>Mercado</Nombre>
+<Desc>
+Lo que parecen los ${puestos, ex puestos} de un ${mercado, ex mercado} se extienden desde el ${canal, ex canal} hacia algún punto cercano a la ${bóveda, ex boveda}.</Desc>
+<NORDESTE>Puente</NORDESTE>
+<SUDESTE>Portal</SUDESTE>
+</Loc>
+
+<Loc >
+<Nombre>Pasarela</Nombre>
+<Desc>
+Este es otro de esos puntos de paso, en este caso al anillo interior, no parece que haya ${mas canales, ex canales}. Se trata de un angosto puentecillo cubierto a modo de paraguas alargado, pero para una pasarela del ancho de una persona.</Desc>
+<NORTE>Explanada del templo</NORTE>
+<NORDESTE>Residencia</NORDESTE>
+<NOROESTE>Puerto</NOROESTE>
+</Loc>
+
+<Loc >
+<Nombre>Portal</Nombre>
+<Desc>
+^{Te ves succionada por el portal para aparecer, como por arte de magia, de pie, sana y salva, del otro lado. Te giras hacia atrás, y solo puedes intuir lo que se supone que es el agua, a raya por parte de una fuerza desconocida para ti.}
+El portal se sitúa sobre una plataforma con base en forma de anillo sobre un ${canal, ex canal} que permite el acceso al ${este, este} y al ${oeste, oeste}. Debería poderse ${cruzar el portal, entra en portal} de nuevo.</Desc>
+<SUR>Profundidades5</SUR>
+<NORDESTE>Urbanizacion</NORDESTE>
+<NOROESTE>Mercado</NOROESTE>
+</Loc>
+
+<Loc >
+<Nombre>Profundidades1</Nombre>
+<Desc>
+Buceas pegada al lecho marino. La arena, de un amarillo grisáceo, apagado, se extiende en todas direcciones.</Desc>
+<NORTE>Profundidades2</NORTE>
+<ARRIBA>Barco</ARRIBA>
+</Loc>
+
+<Loc >
+<Nombre>Profundidades2</Nombre>
+<Desc>
+Buceas pegada al lecho marino. La arena, de un amarillo grisáceo, apagado, se extiende en todas direcciones.</Desc>
+<NORTE>Profundidades5</NORTE>
+<SUR>Profundidades1</SUR>
+<ESTE>Profundidades3</ESTE>
+<OESTE>Profundidades4</OESTE>
+</Loc>
+
+<Loc >
+<Nombre>Profundidades3</Nombre>
+<Desc>
+Buceas pegada al lecho marino. La arena, de un amarillo grisáceo, apagado, se extiende en todas direcciones.</Desc>
+<OESTE>Profundidades2</OESTE>
+</Loc>
+
+<Loc >
+<Nombre>Profundidades4</Nombre>
+<Desc>
+Buceas pegada al lecho marino. La arena, de un amarillo grisáceo, apagado, se extiende en todas direcciones.</Desc>
+<ESTE>Profundidades2</ESTE>
+</Loc>
+
+<Loc >
+<Nombre>Profundidades5</Nombre>
+<Desc>
+Buceas pegada al lecho marino. La arena, de un amarillo grisáceo, apagado, se extiende en todas direcciones.</Desc>
+<NORTE>Portal</NORTE>
+<SUR>Profundidades2</SUR>
+</Loc>
+
+<Loc >
+<Nombre>Puente</Nombre>
+<Desc>
+Desde este punto es posible ${cruzar, s} el ${canal, ex canal} sobre una construcción del mismo ${material, ex oricalcum} que has visto hasta ahora.</Desc>
+<NORTE>Anillo interior - Puente</NORTE>
+<SUDOESTE>Mercado</SUDOESTE>
+</Loc>
+
+<Loc >
+<Nombre>Puerto</Nombre>
+<Desc>
+Buena parte del anillo se emplea aqui como rampa para permitir a los ${barcos, ex barcos} acceder al ${agua, ex agua}. Entre los dos canales y la rampa se asientan multitud de pequeños ${edificios, ex edificios}. Por todas partes, especialmente en la rampa, puedes ver redes secandose.</Desc>
+<NORDESTE>Puente</NORDESTE>
+<SUDOESTE>Pasarela</SUDOESTE>
+</Loc>
+
+<Loc >
+<Nombre>Residencia</Nombre>
+<Desc>
+Las personas aqui se encuentran ekonfrascadas en tareas aparentemente cotidianas. Por primera vez, puedes ver niños, estan jugando, todos con su tunica azul, aunque esta es de un azul intenso, mas oscuro, en contraste con el celeste anterior.
+Cercano a ti puedes ver un gran ${edificio, ex edificio}, contra el canal exterior y alejado del ${canal interior, ex canal}.</Desc>
+<SUDOESTE>Pasarela</SUDOESTE>
+<NOROESTE>Anillo interior - Puente</NOROESTE>
+</Loc>
+
+<Loc >
+<Nombre>Templo</Nombre>
+<Desc>
+^{El interior del templo está muy oscuro, tus ojos tardan en acostumbrarse a la luz. En cuanto te adentras en él, un sentimiento ominoso te invade, no puedes evitar un mal presagio, o simplemente una mala sensación. }El interior es bastante más pequeño de lo que anticipabas. Puedes ver dos ${atlantes, ex sacerdotes}, portando sendos ${báculos, ex baculos} iguales.</Desc>
+<NORTE>Centro del templo</NORTE>
+<SUR>Explanada del templo</SUR>
+</Loc>
+
+<Loc >
+<Nombre>Urbanizacion</Nombre>
+<Desc>
+Varias ${casas, ex casas} se organizan en cuadrícula desde una ${explanada, explanada} cerca del ${canal, ex canal} hasta algún punto cercano a la ${bóveda, ex boveda}.</Desc>
+<SUDOESTE>Portal</SUDOESTE>
+</Loc>
+
+</Locs>
+
+<Objs >
+<Obj >
+<Nombre>Gabriel</Nombre>
+<Desc>Gabriel te mira expectante.</Desc>
+<estaEn>Barco</estaEn>
+<Escenario>S</Escenario>
+</Obj>
+
+<Obj >
+<Nombre>aberturas</Nombre>
+<Desc>En ellas ves a... un buceador.</Desc>
+<estaEn>Centro del templo</estaEn>
+<Escenario>S</Escenario>
+</Obj>
+
+<Obj >
+<Nombre>agua</Nombre>
+<Desc>El mar se encuentra tranquilo esta mañana. La temperatura, con más de 20º, resulta muy agradable.</Desc>
+<estaEn>Barco</estaEn>
+<Escenario>S</Escenario>
+</Obj>
+
+<Obj >
+<Nombre>atlantida</Nombre>
+<Desc>La UVigo y el CSIC financian esta expedición para encontrar la ciudad perdida. La superficie de agua a explorar es inmensa, pues aunque preferentemente exploramos al sur de Doñana, en realidad cualquier punto entre Huelva y Jerez de la Frontera sería válido.</Desc>
+<estaEn>Barco</estaEn>
+<Escenario>S</Escenario>
+</Obj>
+
+<Obj >
+<Nombre>bombonas</Nombre>
+<Desc>Para poder respirar, grandes y oblongamente redondeadas.</Desc>
+<estaEn>Barco</estaEn>
+<Plural>S</Plural>
+</Obj>
+
+<Obj >
+<Nombre>boveda</Nombre>
+<Desc>Se trata de algún tipo de fuerza invisible, puesto que, de nuevo, no puedes apreciar ningún tipo de maquinaria o soporte.</Desc>
+<estaEn>Portal</estaEn>
+<Escenario>S</Escenario>
+</Obj>
+
+<Obj >
+<Nombre>camara</Nombre>
+<Desc>La cámara se encuentra en el centro exacto del templo, y tiene varias aberturas, aunque es muy angosto.</Desc>
+<estaEn>Templo</estaEn>
+<Escenario>S</Escenario>
+</Obj>
+
+<Obj >
+<Nombre>canal</Nombre>
+<Desc>A tus pies, la plataforma circular contiene una masa de agua por la que circulan embarcaciones.</Desc>
+<estaEn>Portal</estaEn>
+<Escenario>S</Escenario>
+</Obj>
+
+<Obj >
+<Nombre>casas</Nombre>
+<Desc>Las casas son bajas, hechas aparentemente de algún tipo de ${piedra, ex piedra} con tonos metalizados, pero sin puertas ni ventanas.</Desc>
+<estaEn>Urbanizacion</estaEn>
+<Escenario>S</Escenario>
+</Obj>
+
+<Obj >
+<Nombre>edificio</Nombre>
+<Desc>Se trata de una gran construccion del mismo material de antes, con sus tonalidades petreas, plateadas y aureas. Por la gran cantidad de ventanas, deduces que parece... un complejo de apartamentos...</Desc>
+<estaEn>Residencia</estaEn>
+<Escenario>S</Escenario>
+</Obj>
+
+<Obj >
+<Nombre>edificios</Nombre>
+<Desc>Si tuvieras que adivinar, dirias que se trata de lonjas y almacenas. Hay ${personas, ex personas} moviendose entre ellos.</Desc>
+<estaEn>Puerto</estaEn>
+<Escenario>S</Escenario>
+</Obj>
+
+<Obj >
+<Nombre>grua</Nombre>
+<Desc>La grua espera inclinada sobre el agua a que vuelva el submarino.</Desc>
+<estaEn>Barco</estaEn>
+<Escenario>S</Escenario>
+</Obj>
+
+<Obj >
+<Nombre>oricalcum</Nombre>
+<Desc>Algún tipo de roca con tonos metalizados dorados y plateados.</Desc>
+<estaEn>Puente</estaEn>
+<Escenario>S</Escenario>
+</Obj>
+
+<Obj >
+<Nombre>pasarela</Nombre>
+<Desc>Muy alta, para permitir pasar embarcaciones por debajo, pero tambien muy estrecha.</Desc>
+<estaEn>Pasarela</estaEn>
+<Escenario>S</Escenario>
+</Obj>
+
+<Obj >
+<Nombre>personas</Nombre>
+<Desc>Definitivamente humanos. Parecen personas como cualquiera que pudiera haberme cruzado por la calle ayer, solo que con una floja túnica azul claro cubriéndoles la mayor parte del cuerpo.</Desc>
+<estaEn>Mercado</estaEn>
+<Escenario>S</Escenario>
+</Obj>
+
+<Obj >
+<Nombre>piedra</Nombre>
+<Desc>La piedra es excepcionalmente dura al tacto, y jurarías que está hecha de la combinación de algún tipo de roca con una aleación ligera... Tiene un tono metalizado entre dorado y plateado ¿Sería este el famoso oricalcum?</Desc>
+<estaEn>Urbanizacion</estaEn>
+<Escenario>S</Escenario>
+</Obj>
+
+<Obj >
+<Nombre>portal</Nombre>
+<Desc>¡Es increíble! Un portal de piedra, de colosales dimensiones, se encuentra justo delante de ti, al norte, invitándote a entrar a algún sitio... ¡en el que no hay agua!</Desc>
+<estaEn>Profundidades5</estaEn>
+<Escenario>S</Escenario>
+</Obj>
+
+<Obj >
+<Nombre>portal_obj</Nombre>
+<Desc>El portal mantiene a raya el agua del mar, de manera que forma una especie de ${bóveda, ex boveda} sobre tu cabeza. No hay soportes aparentes o maquinaria de ningún tipo que produzca este efecto.</Desc>
+<estaEn>Portal</estaEn>
+<Escenario>S</Escenario>
+</Obj>
+
+<Obj >
+<Nombre>puestos</Nombre>
+<Desc>Solo algunas ${personas, ex personas}, probablemente los vendedores, pueden verse cerca de algunos de los puestos.</Desc>
+<estaEn>Mercado</estaEn>
+<Escenario>S</Escenario>
+</Obj>
+
+<Obj >
+<Nombre>rampa</Nombre>
+<Desc>Multiples ${embarcaciones, ex barcos} estan varados en ella, sobre todo pequeños.</Desc>
+<estaEn>Puerto</estaEn>
+<Escenario>S</Escenario>
+</Obj>
+
+<Obj >
+<Nombre>redes</Nombre>
+<Desc>Secandose al aire.</Desc>
+<estaEn>Puerto</estaEn>
+<Escenario>S</Escenario>
+</Obj>
+
+<Obj >
+<Nombre>reloj</Nombre>
+<Desc>Marca la profundidad y el tiempo de inmersión.</Desc>
+<estaEn>Barco</estaEn>
+<Prenda>S</Prenda>
+</Obj>
+
+<Obj >
+<Nombre>respirador</Nombre>
+<Desc>Conecta tu boca con las bombonas.</Desc>
+<estaEn>Barco</estaEn>
+<Prenda>S</Prenda>
+</Obj>
+
+<Obj >
+<Nombre>sacerdotes</Nombre>
+<Desc>Estos dos atlantes son algún tipo de sacerdotes en este oscuro templo. Ambos llevan una túnica negra, y no sonríen como el resto de gente que has encontrado hasta ahora. Cuando les miras interrogativamente, señalan con su bastón el ${centro del templo, ex camara}.</Desc>
+<estaEn>Templo</estaEn>
+<Escenario>S</Escenario>
+</Obj>
+
+<Obj >
+<Nombre>submarino</Nombre>
+<Desc>Como un pequeño torpedo amarillo, pero lleno de sensores. Ahora no está aquí.</Desc>
+<estaEn>Barco</estaEn>
+<Escenario>S</Escenario>
+</Obj>
+
+<Obj >
+<Nombre>traje</Nombre>
+<Desc>Tu traje de neopreno, morado y negro.</Desc>
+<estaEn>Barco</estaEn>
+<Prenda>S</Prenda>
+</Obj>
+
+</Objs>
+
+</Mapa>
+
