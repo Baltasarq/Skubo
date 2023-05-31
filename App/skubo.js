@@ -29,16 +29,20 @@ const creaLoc = function(id, syns, desc, lk) {
 const locStores = creaLoc(
 	"Almacenes",
 	[],
-	"Puedes ver constios almacenes, supones que de pescado. \
+	"Puedes ver varios almacenes, supones que de pescado. \
     Puedes avanzar hacia el ${puerto, so}, por un lado del anillo, \
-    o hacia una ${zona residencial, se}, por el otro.",
+    o hacia una ${zona residencial, se}, por el otro. \
+    Es posible ${atravesar un puente, sal} que lleva al anillo externo.",
     LocKind.Land
 );
 
+locStores.preExit = function() {
+    ctrl.goto( locBridge );
+};
+
 locStores.ini = function() {
-    this.ponSalida( "sur", locBridge );
-    this.ponSalida( "sudoeste", locHarbor );
-    this.ponSalida( "sudeste", locResidence );
+    this.setExitBi( "oeste", locHarbor );
+    this.setExitBi( "este", locResidence );
 };
 
 
@@ -273,7 +277,7 @@ const locChamber = creaLoc(
 const objAberturas = ctrl.creaObj(
 	"aberturas",
 	[ "huecos", "aperturas" ],
-	"En ellas ves a... un buceador. ",
+	"En ellas ves a... un buzo.",
 	locChamber,
 	Ent.Escenario
 );
@@ -302,14 +306,15 @@ const locTempleTerrace = creaLoc(
       puedes ver los dos canales, el interior y el exterior. \
       Es obvio que te encuentras ahora en el centro, \
       despues de tanto caminar rodeando los anillos.} \
-      Frente al final de la angosta pasarela, se encuentra una edificacion \
+      Frente al final de la angosta pasarela, \
+      se encuentra una ${edificacion, n} \
       que por su posicion y altura, debe tener gran importancia. \
       Se te antoja que es algun tipo de templo. ¿A que culto se dedicaria?",
     LocKind.Land
 );
 
-locTempleTerrace.ini = function() {
-    this.setExitBi( "norte", locTemple );
+locTempleTerrace.preExit = function() {
+    ctrl.goto( locWalkway );
 };
 
 
@@ -341,6 +346,7 @@ const pnjAtlantes = ctrl.personas.creaPersona(
 );
 
 pnjAtlantes.preTalk = function() {
+    this.say( "¿Cómo puedo volver a la superf...?" );
     return "Cuanto intentas comunicarte con ellos, te toman de las manos \
             y bailan contigo en círculos con grandes sonrisas... \
             cuando te sueltan, señalan en dirección al centro del anillo.";
@@ -360,17 +366,17 @@ const locWalkway = creaLoc(
 	"Enlace",
 	[ "cruce" ],
 	"Este es otro de esos puntos de paso, en este caso al anillo interior, \
-     no parece que haya ${mas canales, ex canales}. \
+     no parece que haya ${mas canales, ex canal}. \
      Se trata de un ${angosto puentecillo, ex puentecillo} \
      cubierto a modo de paraguas alargado, \
-     pero para una pasarela del ancho de una persona.",
+     pero para una pasarela del ancho de una persona. \
+     Siguiendo el anillo, se puede ir a una ${zona residencial, arriba}, \
+     Mientras que en ${sentido contrario, n} se ve lo que parece un puerto.",
     LocKind.Land
 );
 
-locWalkway.ini = function() {
-    this.setExitBi( "norte", locTempleTerrace );
-    this.setExitBi( "nordeste", locResidence );
-    this.setExitBi( "noroeste", locHarbor );
+locWalkway.preEnter = function() {
+    ctrl.goto( locTempleTerrace );
 };
 
 const objWalkway = ctrl.creaObj(
@@ -392,13 +398,13 @@ const locPortal = creaLoc(
        de pie, sana y salva, del otro lado. Te giras hacia atrás, y solo \
        puedes intuir lo que se supone que es el agua, a raya por parte \
        de una ${fuerza desconocida para ti, ex boveda}. }\
-       El portal se sitúa sobre \
+       <p>El portal se sitúa sobre \
        una plataforma ${sumergida, ex boveda} \
        con base en forma de anillo sobre un \
        ${canal, ex canal} que permite el acceso \
        al ${este, este} y al ${oeste, oeste}. \
        Supones que debería poderse \
-       ${cruzar el portal, entra en portal} de nuevo.",
+       ${cruzar el portal, entra en portal} de nuevo.</p>",
     LocKind.Land
 );
 
@@ -490,7 +496,7 @@ const objLandPortal = ctrl.creaObj(
 );
 
 objLandPortal.preEnter = function() {
-    return "No te succiona, te reachaza. La vuelta debe poder hacerse \
+    return "No te succiona, te rechaza. La vuelta debe poder hacerse \
             desde otro lugar.";
 };
 
@@ -634,15 +640,15 @@ const objSeaPortal = ctrl.creaObj(
 const locBridge = creaLoc(
 	"Puente",
 	[],
-	"Desde este punto es posible ${cruzar, s} el ${canal, ex canal} \
+	"Desde este punto es posible ${cruzar, entra} el ${canal, ex canal} \
      sobre una construcción del mismo ${material, ex oricalcum} \
      que has visto hasta ahora. Rodeando el anillo, puedes llegar a \
-     un mercado y a una urbanización.",
+     un ${mercado, s} y a una ${urbanización, abajo}.",
     LocKind.Land
 );
 
-locBridge.ini = function() {
-    this.setExitBi( "sur", locStores );
+locBridge.preEnter = function() {
+    ctrl.goto( locStores );
 };
 
 const objOricalcum = ctrl.creaObj(
@@ -662,13 +668,15 @@ const locHarbor = creaLoc(
      ${barcos, ex barcos} acceder al ${agua, ex agua}. \
      Entre los dos canales y la rampa se asientan multitud de \
      pequeños ${edificios, ex edificios}. Por todas partes, \
-     especialmente en la rampa, puedes ver redes secandose.",
+     especialmente en la rampa, puedes ver ${redes, ex redes} secandose. \
+     Rodeando el anillo, se puede llegar a unos ${almacenes, e}. \
+     En ${sentido contrario, s}, se podría llegar a una zona con una pasarela \
+     por la que parece que se puede acceder al centro.",
     LocKind.Land
 );
 
 locHarbor.ini = function() {
-    this.setExitBi( "nordeste", locBridge );
-    this.setExitBi( "sudoeste", locWalkway );
+    this.setExitBi( "sur", locWalkway );
 };
 
 const objBuildings = ctrl.creaObj(
@@ -706,13 +714,15 @@ const locResidence = creaLoc(
      aunque esta es de un azul intenso, más oscuro, \
      en contraste con el celeste anterior. \
      Cercano a ti puedes ver un gran ${edificio, ex edificio}, \
-     contra el canal exterior y alejado del ${canal interior, ex canal}.",
+     contra el canal exterior y alejado del ${canal interior, ex canal}. \
+     ${Siguiendo el anillo, abajo} en un sentido, \
+     parece que se puede cruzar el canal, mientras que en sentido contrario \
+     se llega a lo que parecen unos ${almacenes, o}.",
     LocKind.Land
 );
 
 locResidence.ini = function() {
-    this.setExitBi( "sudoeste", locWalkway );
-    this.setExitBi( "noroeste", locStores );
+    this.setExitBi( "abajo", locWalkway );
 };
 
 const objEdificio = ctrl.creaObj(
@@ -743,7 +753,7 @@ const locTemple = creaLoc(
 
 locTemple.ini = function() {
     this.setExit( "norte", locChamber );
-    this.ponSalida( "sur", locTempleTerrace );
+    this.setExitBi( "sur", locTempleTerrace );
 };
 
 const pnjSacerdotes = ctrl.personas.creaPersona(
@@ -785,10 +795,6 @@ const locUrbanization = creaLoc(
 
 locUrbanization.ini = function() {
     this.setExitBi( "arriba", locBridge );
-};
-
-locUrbanization.preEnter = function() {
-    ctrl.goto( locAlmacenes );
 };
 
 const objStone = ctrl.creaObj(
