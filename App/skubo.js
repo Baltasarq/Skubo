@@ -433,7 +433,7 @@ locPortal.preLook = function() {
 const objShorts = ctrl.creaObj(
     "pantalones cortos",
     [ "shorts" ],
-    "Si, unos cómodos pantalones cortos.",
+    "Sí, unos cómodos pantalones cortos.",
     ctrl.locs.limbo,
     Ent.Portable
 );
@@ -672,11 +672,11 @@ const objOricalcum = ctrl.creaObj(
 const locHarbor = creaLoc(
 	"Puerto",
 	[ "muelle" ],
-	"Buena parte del anillo se emplea aqui como rampa para permitir a los \
+	"Buena parte del anillo se emplea aquí como rampa para permitir a los \
      ${barcos, ex barcos} acceder al ${agua, ex agua}. \
      Entre los dos canales y la rampa se asientan multitud de \
      pequeños ${edificios, ex edificios}. Por todas partes, \
-     especialmente en la rampa, puedes ver ${redes, ex redes} secandose. \
+     especialmente en la rampa, puedes ver ${redes, ex redes} secándose. \
      Rodeando el anillo, se puede llegar a unos ${almacenes, e}. \
      En ${sentido contrario, s}, se podría llegar a una zona con una pasarela \
      por la que parece que se puede acceder al centro.",
@@ -690,7 +690,8 @@ locHarbor.ini = function() {
 const objBuildings = ctrl.creaObj(
 	"edificios",
 	[ "edificio" ],
-	"Si tuvieras que adivinar, dirias que se trata de lonjas y almacenas. Hay ${personas, ex personas} moviendose entre ellos.",
+	"Si tuvieras que adivinar, dirías que se trata de lonjas y almacenas. \
+     Hay ${personas, ex personas} moviéndose entre ellos.",
 	locHarbor,
 	Ent.Escenario
 );
@@ -698,7 +699,8 @@ const objBuildings = ctrl.creaObj(
 const objRamp = ctrl.creaObj(
 	"rampa",
 	[],
-	"Multiples ${embarcaciones, ex barcos} estan constados en ella, sobre todo pequeños.",
+	"Múltiples ${embarcaciones, ex barcos} están varados en ella. \
+     Son sobre todo de pequeño tamaño.",
 	locHarbor,
 	Ent.Escenario
 );
@@ -724,9 +726,9 @@ const objShips = ctrl.creaObj(
 const locResidence = creaLoc(
 	"Residencia",
 	[ "residencial" ],
-	"Las ${personas, ex personas} aqui se encuentran enfrascadas en tareas \
+	"Las ${personas, ex personas} aquí se encuentran enfrascadas en tareas \
      aparentemente cotidianas. Por primera vez, puedes ver \
-     ${niños, ex ninos}, estan jugando, todos con su tunica azul, \
+     ${niños, ex ninos}, están jugando, todos con su túnica azul, \
      aunque esta es de un azul intenso, más oscuro, \
      en contraste con el celeste anterior. \
      Cercano a ti puedes ver un gran ${edificio, ex edificio}, \
