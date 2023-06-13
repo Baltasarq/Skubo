@@ -1,6 +1,6 @@
 // Skubo (c) 2023 Baltasar MIT License <baltasarq@gmail.com>
 /*
-	FI.JS@txtMap, v0.1/ v0.6 20140612
+	FI.JS@txtMap, v0.1 / v0.6 20140612
 	Tue May 30 14:26:47 2023
 
 */
@@ -23,9 +23,7 @@ const creaLoc = function(id, syns, desc, lk) {
 };
 
 
-
 // ------------------------------------------------------------------ locStores
-
 const locStores = creaLoc(
 	"Almacenes",
 	[],
@@ -294,13 +292,10 @@ objAberturas.preExamine = function() {
                               Acompañas la penosa ascensión de \
                               los tres buceadores... siempre presente, \
                               pero como fuera de la escena. \
-                              Y solo entonces, comienzas a comprender. \
-                              <p>Fin.<br/>\
-                              <a href='javascript: window.location.reload()'> \
-                              Volver a leer</a>.</p>";
+                              Y solo entonces, comienzas a comprender.";
 
     dvCmds.style.display = "none";
-    ctrl.endGame( msg, "res/ascension.jpg" );
+    ctrl.endGame( msg + objEnd.scaffolding, "res/ascension.jpg" );
 };
 
 
@@ -353,7 +348,9 @@ const pnjAtlantes = ctrl.personas.creaPersona(
 );
 
 pnjAtlantes.preTalk = function() {
-    this.say( "¿Cómo puedo volver a la superf...?" );
+    const player = ctrl.personas.getPlayer();
+
+    player.say( "¿Cómo puedo volver a la superf...?" );
     return "Cuanto intentas comunicarte con ellos, te toman de las manos \
             y bailan contigo en círculos con grandes sonrisas... \
             cuando te sueltan, señalan en dirección al centro del anillo.";
@@ -766,10 +763,11 @@ pnjNinnos.ini = function() {
 };
 
 pnjNinnos.preTalk = function() {
+    const player = ctrl.personas.getPlayer();
     let toret = "Te miran durante un momento, sonríen y... \
                  señalan al centro del anillo.";
 
-    this.say( "Hola, niños..." );
+    player.say( "Hola, niños..." );
 
     if ( this.status == 0 ) {
         this.status++;
@@ -861,6 +859,106 @@ const objCasas = ctrl.creaObj(
 	Ent.Escenario
 );
 
+
+// End ------------------------------------------------------------------------
+objEnd = {};
+objEnd.msgEnd = "<c>Rfcreb dhr unlnf qvfsehgnqb qr rfgr eryngb. \
+                 Pbzb unoeáf nqvivanqb, gvrar tenaqrf pbzcbaragrf \
+                 baíevpbf dhr dhvmáf gr unlna qrwnqb pba qhqnf, b dhvmáf \
+                 unlnf vagrecergnqb qr znaren \
+                 qvsreragr n phnaqb lb yb pbaproí. \
+                 N pbagvahnpvóa ivrar han rkcyvpnpvóa \
+                 ernyvfgn fboer rfgr grzn; \
+                 gú qrorf qrpvqve fv dhvrerf yrreyn b ab.\
+                 </c>\
+                 <c>Zv vqrn phnaqb peré ry whrtb ren eryngne han rkcrevrapvn \
+                 baíevpn erynpvbanqn pba ry rairaranzvragb cbe ybf tnfrf ny \
+                 ntbgnefr yn obgryyn qr bkítrab/avgeótrab.\
+                 </c>\
+                 <c>Cvqb creqóa qr nagrznab cbedhr frthenzragr nythvra dhr \
+                 cenpgvdhr ohprb qveá dhr rfgn fvghnpvóa ab rf ernyvfgn.\
+                 </c>\
+                 <c>Yn phrfgvóa rf dhr yn cebgntbavfgn rfgá gna zbgvinqn cbe \
+                 rapbagene yn Ngyáagvqn dhr \
+                 nchen unfgn ry svany fh obzoban... \
+                 yb dhr yr genr pbafrphrapvnf \
+                 pngnfgeósvpnf. Ha cevzre qrgnyyr, \
+                 dhr ur fnpnqb qr ybf fhrñbf baíevpbf, rf dhr ry erybw qr \
+                 vazrefvóa ahapn qrihryir qbf qngbf vthnyrf.\
+                 </c>\
+                 <c>Yn cebgntbavfgn raphragen ry \
+                 cbegny l fr zrgr. Ln rfgá sngny, \
+                 cbedhr fh fhopbafpvragr un zrmpynqb fh qrfrb qr rapbagene \
+                 yn Ngyáagvqn pba fh arprfvqnq qr ibyire n yn fhcresvpvr \
+                 (arprfvqnq dhr un vqb eryrtnaqb n ha frthaqb cynab). \
+                 Ndhí ln cbqrzbf fnore dhr rfgá cnfnaqb nytb tenir fv unprzbf \
+                 ha vairagnevb... ¡fhf ebcnf una pnzovnqb pbzcyrgnzragr!\
+                 </c>\
+                 <c>Rkcybenaqb yn pvhqnq creqvqn, abf rapbagenerzbf pba han \
+                 fvghnpvóa pbzb vqrny, ra yn dhr gbqbf ybf unovgnagrf \
+                 fbaeíra l onvyna, creb ab fba qr tena nlhqn, pyneb; rkprcgb \
+                 dhr abf frñnyna ry prageb qr yn pvhqnq. N zrqvqn dhr abf \
+                 npredhrzbf ny prageb, abgnerzbf dhr ybf pbyberf fr ina \
+                 qrfqvohwnaqb. Rfgb gvrar dhr ire pba yn ivqn qr yn \
+                 cebgntbavfgn, dhr fr in creqvraqb.\
+                 </c>\
+                 <c>Phnaqb yyrtnzbf ny prageb, abf zrgrzbf ra ry grzcyb bfpheb l \
+                 nyyí rapbagenzbf n qbf fnpreqbgrf \
+                 pba gúavpnf artenf. Rfgb rf \
+                 qrovqb gnzovéa n yn céqvqn qr ivqn (pnqn irm zrabf pbybe l \
+                 yhm), creb fboer gbqb rfbf qbf fnpreqbgrf fba ra ernyvqnq \
+                 ybf qbf ohmbf dhr gr una rapbagenqb. Phnaqb gr zrgrf \
+                 ra rfn páznen, rf phnaqb svanyzragr gh nyzn fr frcnen qr gh \
+                 phrecb l nfvfgrf \"qrfqr shren\" (pbzb gnagbf dhr una ihrygb \
+                 qr fvghnpvbarf prepnanf n yn zhregr una eryngnqb), \
+                 n yn nfprafvóa qr gh phrecb unpvn yn fhcresvpvr, \
+                 yb pháy n yn irm fveir qr fízvy pba yn gna znavqn nfprafvóa \
+                 unpvn yn yhm. Fí, ry genwr qr arbcerab zbenqb l arteb rf \
+                 ry ghlb, chrqrf fnoreyb fv unprf ha vairagnevb \
+                 ny vavpvb qr yn niraghen.\
+                 </c>";
+
+objEnd.rot13decoder = function(msg) {
+    const codeUpperA = "A".charCodeAt( 0 );
+    const codeUpperZ = "Z".charCodeAt( 0 );
+    const codeLowerA = "a".charCodeAt( 0 );
+    const codeLowerZ = "z".charCodeAt( 0 );
+    const lengthAlphabet = codeUpperZ - codeUpperA + 1;
+    let toret = "";
+
+    for(let i = 0; i < msg.length; ++i) {
+        let chCode = msg.charCodeAt( i );
+
+        if ( ( chCode >= codeUpperA
+           &&  chCode <= codeUpperZ )
+          || ( chCode >= codeLowerA
+           &&  chCode <= codeLowerZ ))
+        {
+            // Position in alphabet
+            let chBase = codeUpperA;
+            let chPos = chCode - codeUpperA;
+
+            if ( chCode >= codeLowerA ) {
+                chBase = codeLowerA;
+                chPos = chCode - codeLowerA;
+            }
+
+            // Decode
+            chCode = chBase + ( ( chPos + 13 ) % lengthAlphabet );
+        }
+
+        toret += String.fromCharCode( chCode );
+    }
+
+    return toret;
+};
+
+objEnd.scaffolding = "<p>Fin.</p>\
+                      <p><a href='javascript: window.location.reload()'> \
+                      Volver a leer</a>.</p>\
+                      <details><summary>Curiosidades</summary>"
+                      + objEnd.rot13decoder( objEnd.msgEnd )
+                      + "</details>";
 
 // Start ----------------------------------------------------------------------
 const player = ctrl.personas.creaPersona(
