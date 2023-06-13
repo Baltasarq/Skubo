@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ifindex version="1.0" xmlns="http://babel.ifarchive.org/protocol/iFiction/">
+    <story>
+        <identification>
+            <ifid>12390A47-144C-4CE2-B574-BC2E140D9AF8</ifid>
+            <format>html</format>
+        </identification>
+        <bibliographic>
+            <title>Skubo</title>
+            <author>Baltasar</author>
+            <language>ES</language>
+            <headline>En busca de la Atlántida</headline>
+            <genre>mistery</genre>
+            <forgiveness>merciful</forgiveness>
+            <description>La UHU y el CSIC financian esta expedición para encontrar la ciudad perdida.<br/><br/>La superficie de agua a explorar es inmensa, pues aunque preferentemente exploramos al sur de Doñana, en realidad cualquier punto entre Huelva y Jerez de la Frontera sería válido.</description>
+        </bibliographic>
+        <contacts>
+            <authoremail>baltasarq@gmail.com</authoremail>
+            <url>http://baltasarq.info/</url>
+        </contacts>
+        <release>
+            <version>1</version>
+            <releasedate>2023/05/31</releasedate>
+        </release>
+        <colophon>
+            <generator>Babble</generator>
+            <originated>2023/05/31</originated>
+        </colophon>
+    </story>
+</ifindex>
