@@ -997,7 +997,7 @@ ctrl.ini = function() {
                     La superficie de agua a explorar es inmensa, \
                     pues aunque preferentemente exploramos al sur de Doñana, \
                     en realidad cualquier punto entre \
-                    Huelva y Jerez de la Frontera sería válido.</p>"
+                    Huelva y Tarifa sería válido.</p>"
     );
     ctrl.setPic( "res/portada.jpg" );
     ctrl.setAuthor( "baltasarq@gmail.com" );
