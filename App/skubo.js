@@ -85,7 +85,7 @@ const objAtlantida = ctrl.creaObj(
 	"La UHU y el CSIC financian esta expedición para encontrar \
      la ciudad perdida. La superficie de agua a explorar es inmensa, \
      pues aunque preferentemente exploramos al sur de Doñana, \
-     en realidad cualquier punto entre Huelva y Jerez de la Frontera \
+     en realidad cualquier punto entre Huelva y Tarifa \
      sería válido.",
 	locShip,
 	Ent.Escenario
