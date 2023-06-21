@@ -6,6 +6,14 @@
 */
 
 // *** Locs ===================================================================
+/** This is used in the adventure's intro and in objAtlantida's description. */
+const txtIntro = "La UHU y el CSIC financian esta expedición \
+                  para encontrar la ciudad perdida. \
+                  La superficie de agua a explorar es inmensa, \
+                  pues aunque preferentemente exploramos al sur de Doñana, \
+                  en realidad cualquier punto entre \
+                  Huelva y Tarifa sería válido.";
+
 const LocKind = { "Ship": 1, "Sea": 2, "Land": 3 };
 
 const creaLoc = function(id, syns, desc, lk) {
@@ -82,11 +90,7 @@ const objSuperficieAgua = ctrl.creaObj(
 const objAtlantida = ctrl.creaObj(
 	"atlantida",
 	[ "ciudad", "perdida" ],
-	"La UHU y el CSIC financian esta expedición para encontrar \
-     la ciudad perdida. La superficie de agua a explorar es inmensa, \
-     pues aunque preferentemente exploramos al sur de Doñana, \
-     en realidad cualquier punto entre Huelva y Tarifa \
-     sería válido.",
+	txtIntro,
 	locShip,
 	Ent.Escenario
 );
@@ -992,12 +996,7 @@ player.postAction = function() {
 ctrl.ini = function() {
     ctrl.setTitle( "Skubo" );
     ctrl.setIntro( "<p>En busca de la Atlántida.<br/></p>\
-                    <p>La UHU y el CSIC financian esta expedición \
-                    para encontrar la ciudad perdida. \
-                    La superficie de agua a explorar es inmensa, \
-                    pues aunque preferentemente exploramos al sur de Doñana, \
-                    en realidad cualquier punto entre \
-                    Huelva y Tarifa sería válido.</p>"
+                    <p>" + txtIntro + "</p>"
     );
     ctrl.setPic( "res/portada.jpg" );
     ctrl.setAuthor( "baltasarq@gmail.com" );
