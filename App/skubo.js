@@ -127,8 +127,8 @@ const pnjDivers = ctrl.personas.creaPersona(
 
 pnjDivers.preTalk = function() {
     return "Aunque no puedes hablarles, intercambias con ellos \
-            el gesto universal de que todo va bien: \
-            el pulgar hacia arriba.";
+            el gesto universal para inmersión de que todo va bien: \
+            el índice y el pulgar haciendo una 'o'.";
 };
 
 const objWatch = ctrl.creaObj(
